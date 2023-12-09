@@ -20,6 +20,8 @@ Comandos utilizados:
 - yarn add @types/jsonwebtoken -D: tipos
 - yarn add dotenv: acessar variaveis de ambiente
 
+
 Dicas:
 Gerar JWT: https://www.md5hashgenerator.com/
 Mudar o strict para false
+Para sobrescrever algum tipo já existente typeRoots
