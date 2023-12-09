@@ -19,7 +19,8 @@ Comandos utilizados:
 - yarn add jsonwebtoken: criação de json
 - yarn add @types/jsonwebtoken -D: tipos
 - yarn add dotenv: acessar variaveis de ambiente
-
+- yarn add multer: trabalhar com imagens
+- yarn add @types/multer -D: tipos
 
 Dicas:
 Gerar JWT: https://www.md5hashgenerator.com/
