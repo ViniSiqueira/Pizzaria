@@ -1,7 +1,7 @@
 import prismaClient from "../../prisma"
 
 interface OrderRequest{
-    order_id: string
+    order_id: string;
 }
 
 class RemoveOrderService{
