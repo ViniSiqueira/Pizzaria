@@ -1,0 +1,647 @@
+{
+	"info": {
+		"_postman_id": "60ca9b53-1d96-4cf8-8808-62be83a07b9c",
+		"name": "Pizarria",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28786402"
+	},
+	"item": [
+		{
+			"name": "Criar Usuario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"mariana\",\r\n    \"email\": \"mariana@hotmail.com\",\r\n    \"password\": \"123123\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3333/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logar",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"mariana@hotmail.com\",\r\n    \"password\": \"123123\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3333/session",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"session"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detalhes Usuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibWFyaWFuYSIsImVtYWlsIjoibWFyaWFuYUBob3RtYWlsLmNvbSIsImlhdCI6MTcwMjA4NjgzNywiZXhwIjoxNzA0Njc4ODM3LCJzdWIiOiJkNDcxNGMxMC00ZDgyLTRhYWYtOGU3Zi0yYjBhNGM3NGY4MTYifQ.4cXjbMBMvzRi7SCwIRXq-VdaFyNBHMse1OGty4vC1DY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3333/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Categorias",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibWFyaWFuYSIsImVtYWlsIjoibWFyaWFuYUBob3RtYWlsLmNvbSIsImlhdCI6MTcwMjA4NjgzNywiZXhwIjoxNzA0Njc4ODM3LCJzdWIiOiJkNDcxNGMxMC00ZDgyLTRhYWYtOGU3Zi0yYjBhNGM3NGY4MTYifQ.4cXjbMBMvzRi7SCwIRXq-VdaFyNBHMse1OGty4vC1DY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3333/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Produtos por Categorias",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibWFyaWFuYSIsImVtYWlsIjoibWFyaWFuYUBob3RtYWlsLmNvbSIsImlhdCI6MTcwMjA4NjgzNywiZXhwIjoxNzA0Njc4ODM3LCJzdWIiOiJkNDcxNGMxMC00ZDgyLTRhYWYtOGU3Zi0yYjBhNGM3NGY4MTYifQ.4cXjbMBMvzRi7SCwIRXq-VdaFyNBHMse1OGty4vC1DY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3333/category/product?category_id=f0e2dff4-88e9-4388-96a6-8e0eff0f23e5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"category",
+						"product"
+					],
+					"query": [
+						{
+							"key": "category_id",
+							"value": "f0e2dff4-88e9-4388-96a6-8e0eff0f23e5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teste de rotas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/teste",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"teste"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar Categoria",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibWFyaWFuYSIsImVtYWlsIjoibWFyaWFuYUBob3RtYWlsLmNvbSIsImlhdCI6MTcwMjA4NjgzNywiZXhwIjoxNzA0Njc4ODM3LCJzdWIiOiJkNDcxNGMxMC00ZDgyLTRhYWYtOGU3Zi0yYjBhNGM3NGY4MTYifQ.4cXjbMBMvzRi7SCwIRXq-VdaFyNBHMse1OGty4vC1DY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Pizza\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3333/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar Produto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibWFyaWFuYSIsImVtYWlsIjoibWFyaWFuYUBob3RtYWlsLmNvbSIsImlhdCI6MTcwMjA4NjgzNywiZXhwIjoxNzA0Njc4ODM3LCJzdWIiOiJkNDcxNGMxMC00ZDgyLTRhYWYtOGU3Zi0yYjBhNGM3NGY4MTYifQ.4cXjbMBMvzRi7SCwIRXq-VdaFyNBHMse1OGty4vC1DY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Pizza de calabresa",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "46",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "pizza feita na mao",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/vinic/Downloads/iStock-1212512019.jpg"
+						},
+						{
+							"key": "category_id",
+							"value": "f0e2dff4-88e9-4388-96a6-8e0eff0f23e5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3333/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar Pedido",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibWFyaWFuYSIsImVtYWlsIjoibWFyaWFuYUBob3RtYWlsLmNvbSIsImlhdCI6MTcwMjA4NjgzNywiZXhwIjoxNzA0Njc4ODM3LCJzdWIiOiJkNDcxNGMxMC00ZDgyLTRhYWYtOGU3Zi0yYjBhNGM3NGY4MTYifQ.4cXjbMBMvzRi7SCwIRXq-VdaFyNBHMse1OGty4vC1DY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"table\": 4,\r\n    \"name\": \"Vinicius\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3333/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar Item no Pedido",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibWFyaWFuYSIsImVtYWlsIjoibWFyaWFuYUBob3RtYWlsLmNvbSIsImlhdCI6MTcwMjA4NjgzNywiZXhwIjoxNzA0Njc4ODM3LCJzdWIiOiJkNDcxNGMxMC00ZDgyLTRhYWYtOGU3Zi0yYjBhNGM3NGY4MTYifQ.4cXjbMBMvzRi7SCwIRXq-VdaFyNBHMse1OGty4vC1DY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"order_id\": \"a5fda680-2cc9-448f-8178-b959be41b078\",\r\n    \"product_id\": \"283662b0-dace-4379-81aa-6e8620beaf85\",\r\n    \"amount\": 1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3333/order/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"order",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Pedido",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibWFyaWFuYSIsImVtYWlsIjoibWFyaWFuYUBob3RtYWlsLmNvbSIsImlhdCI6MTcwMjA4NjgzNywiZXhwIjoxNzA0Njc4ODM3LCJzdWIiOiJkNDcxNGMxMC00ZDgyLTRhYWYtOGU3Zi0yYjBhNGM3NGY4MTYifQ.4cXjbMBMvzRi7SCwIRXq-VdaFyNBHMse1OGty4vC1DY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"order_id\": \"a5fda680-2cc9-448f-8178-b959be41b078\"    \r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3333/order/send",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"order",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Pedido",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibWFyaWFuYSIsImVtYWlsIjoibWFyaWFuYUBob3RtYWlsLmNvbSIsImlhdCI6MTcwMjA4NjgzNywiZXhwIjoxNzA0Njc4ODM3LCJzdWIiOiJkNDcxNGMxMC00ZDgyLTRhYWYtOGU3Zi0yYjBhNGM3NGY4MTYifQ.4cXjbMBMvzRi7SCwIRXq-VdaFyNBHMse1OGty4vC1DY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3333/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Detalhes do Pedido",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibWFyaWFuYSIsImVtYWlsIjoibWFyaWFuYUBob3RtYWlsLmNvbSIsImlhdCI6MTcwMjA4NjgzNywiZXhwIjoxNzA0Njc4ODM3LCJzdWIiOiJkNDcxNGMxMC00ZDgyLTRhYWYtOGU3Zi0yYjBhNGM3NGY4MTYifQ.4cXjbMBMvzRi7SCwIRXq-VdaFyNBHMse1OGty4vC1DY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3333/order/detail?order_id=a5fda680-2cc9-448f-8178-b959be41b078",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"order",
+						"detail"
+					],
+					"query": [
+						{
+							"key": "order_id",
+							"value": "a5fda680-2cc9-448f-8178-b959be41b078"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Finalizar Pedido",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibWFyaWFuYSIsImVtYWlsIjoibWFyaWFuYUBob3RtYWlsLmNvbSIsImlhdCI6MTcwMjA4NjgzNywiZXhwIjoxNzA0Njc4ODM3LCJzdWIiOiJkNDcxNGMxMC00ZDgyLTRhYWYtOGU3Zi0yYjBhNGM3NGY4MTYifQ.4cXjbMBMvzRi7SCwIRXq-VdaFyNBHMse1OGty4vC1DY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"order_id\": \"f40c1cbe-5673-48fd-b1f3-abe28562917b\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3333/order/finish",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"order",
+						"finish"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remover Item do Pedido",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibWFyaWFuYSIsImVtYWlsIjoibWFyaWFuYUBob3RtYWlsLmNvbSIsImlhdCI6MTcwMjA4NjgzNywiZXhwIjoxNzA0Njc4ODM3LCJzdWIiOiJkNDcxNGMxMC00ZDgyLTRhYWYtOGU3Zi0yYjBhNGM3NGY4MTYifQ.4cXjbMBMvzRi7SCwIRXq-VdaFyNBHMse1OGty4vC1DY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3333/order/remove?item_id=38b3d86e-3325-480e-b38b-e296f98a1b7d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"order",
+						"remove"
+					],
+					"query": [
+						{
+							"key": "item_id",
+							"value": "38b3d86e-3325-480e-b38b-e296f98a1b7d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remover Pedido",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibWFyaWFuYSIsImVtYWlsIjoibWFyaWFuYUBob3RtYWlsLmNvbSIsImlhdCI6MTcwMjA4NjgzNywiZXhwIjoxNzA0Njc4ODM3LCJzdWIiOiJkNDcxNGMxMC00ZDgyLTRhYWYtOGU3Zi0yYjBhNGM3NGY4MTYifQ.4cXjbMBMvzRi7SCwIRXq-VdaFyNBHMse1OGty4vC1DY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3333/order?order_id=dfa6ff8c-f747-44d8-bc1a-b2e3e656284c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"order"
+					],
+					"query": [
+						{
+							"key": "order_id",
+							"value": "dfa6ff8c-f747-44d8-bc1a-b2e3e656284c"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
