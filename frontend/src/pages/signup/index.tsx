@@ -20,7 +20,7 @@ export default function Signup() {
     event.preventDefault();
     
     if(name === '' || email === '' || password === ''){
-      toast.error("Preencha todos os campos");
+      toast.warning("Preencha todos os campos");
       return;
     }
 
